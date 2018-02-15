@@ -1,8 +1,4 @@
 ---
-- name: Download activiti
-  stat: path=/vagrant/activiti-{{ activiti_version }}.zip
-  register: activiti_zip_archive
-
 - name: copy local activiti archive if exists
   unarchive:
     src=files/activiti-{{ activiti_version }}.zip
