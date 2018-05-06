@@ -6,6 +6,7 @@
     - proxy.yml
   environment: "{{ proxy_env }}"
   roles:
+#    - ../ansible_common/lsf    
     - ../ansible_common/common
     - { role: ../ansible_common/postgres, db_name: activiti, db_passwd: "{{ db_passwd_activiti }}" }
     - { role: ../ansible_common/postgres, db_name: activitiadmin, db_passwd: "{{ db_passwd_activiti }}", init: false }
